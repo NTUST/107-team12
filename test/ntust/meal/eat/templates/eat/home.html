@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<head>
+		<title>後。食</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/static/assets/css/main.css"/><link rel="Tableware Icon" type="image/x-icon" href="https://merakiroasting.com/wp-content/uploads/2017/10/115505-magic-marker-icon-food-beverage-knife-fork3.png" />
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+<link href="/static/src/css/bootstrap.min.css" rel="stylesheet">
+    	<link href="/static/src/css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="{%url 'index' %}" style="font-family:'FangSong';">NTUST EAT-LATE</a></h1>
+				<a href="#nav">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="{%url 'index' %}">Home</a></li>
+					<li><a href="{%url 'pick' %}">WHAT</a></li>
+					<li><a href="{%url 'vote' %}">VOTE</a></li>
+					<li><a href="{%url 'chowfan' %}">炒飯炒麵</a></li>
+					<li><a href="{%url 'tofu' %}">豆腐麵線</a></li>
+					<li><a href="{%url 'fried' %}">精選炸物</a></li>
+
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<i class="icon fa-diamond"></i>
+				<h2>Eatting Time</h2>
+				<p>Find Something Special</p>
+				<ul class="actions">
+					<li><a href="{%url 'pick' %}" class="button big special">吃起來</a></li>
+				</ul>
+			</section>
+
+
+
+			<section id="four" class="wrapper style2 special">
+				<div class="inner">
+					<header class="major narrow">
+						<h2  style="color: white">美食地圖</h2><br>
+						<p> 猜看看 點看看 到底美食在哪呢?</p>
+						<img src="/static/images/map.jpg" style="border-radius: 50px"usemap="#carmap" ></img>
+
+						<map name="carmap">
+						<area  shape="rect"  coords="230,220,300,250" href="http://www.ntust.edu.tw/home.php">
+						<area  shape="rect"  coords="320,430,380,460" href="{%url 'chowfan' %}">
+						<area  shape="rect"  coords="350,400,420,430" href="tofu-info.html">
+						<area  shape="rect"  coords="415,380,470,410" href="fried-info.html">
+
+						</map>
+					</header>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style1">
+				<div class="inner">
+					<article class="feature left">
+						<span class="image"><img src="/static/images/vote.jpg" alt="vote" /></span>
+						<div class="content">
+							<h2>Vote | 我要投票</h2>
+							<p>快投出心目中的最愛。推薦給大家，一起享受美食。</p>
+							<ul class="actions">
+								<li>
+									<a href="{%url 'vote' %}" class="button alt">More</a>
+								</li>
+							</ul>
+						</div>
+					</article>
+					<article class="feature right">
+						<span class="image"><img src="/static/images/what.jpg" alt="what" /></span>
+						<div class="content">
+							<h2>What | 今天吃啥</h2>
+							<p>想不到吃甚麼很苦惱嗎?讓我們幫你找到最適合你的今日特餐!</p>
+							<ul class="actions">
+								<li>
+									<a href="{%url 'pick' %}" class="button alt">More</a>
+								</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper special">
+				<!--<div class="inner">
+					<header class="major narrow">
+						<h2>美食精選相簿</h2>
+						<p>最有特色的台灣消夜通通都在這</p>
+					</header>
+					<div class="image-grid">
+						<a href="fried-menu.html" class="image"><img src="images/1-1.jpg" alt="" /></a>
+						<a href="tofu-menu.html" class="image"><img src="images/2-1.jpg" alt="" /></a>
+						<a href="fried-menu.html" class="image"><img src="images/1-3.jpg" alt="" /></a>
+						<a href="fan-menu.html" class="image"><img src="images/3-1.jpg" alt="" /></a>
+						<a href="fan-menu.html" class="image"><img src="images/3-2.jpg" alt="" /></a>
+						<a href="tofu-menu.html" class="image"><img src="images/2-2.jpg" alt="" /></a>
+						<a href="fried-menu.html" class="image"><img src="images/1-2.jpg" alt="" /></a>
+						<a href="fan-menu.html" class="image"><img src="images/3-3.jpg" alt="" /></a>
+					</div>
+					<ul class="actions">
+						<li><a href="what.html" class="button big alt">還是不知道吃啥?</a></li>
+					</ul>
+				</div>-->
+
+			<div class="w3-container">
+  			<h2 class="content">美食精選相簿</h2><br>
+			</div>
+
+				<div class="inner" style="display: block;float:center">
+					<div class="carousel slide" id="carousel-492298" data-ride="carousel" data-interval="3000">
+						<ol class="carousel-indicators">
+							<li data-slide-to="0" data-target="#carousel-492298" class="active">
+							</li>
+							<li data-slide-to="1" data-target="#carousel-492298">
+							</li>
+							<li data-slide-to="2" data-target="#carousel-492298">
+							</li>
+							<li data-slide-to="3" data-target="#carousel-492298">
+							</li>
+							<li data-slide-to="4" data-target="#carousel-492298">
+							</li>
+							<li data-slide-to="5" data-target="#carousel-492298">
+							</li>
+							<li data-slide-to="6" data-target="#carousel-492298">
+							</li>
+							<li data-slide-to="7" data-target="#carousel-492298">
+							</li>
+
+						</ol>
+						<div class="carousel-inner">
+
+							<div class="carousel-item active" 	style="width:1000px;height:500px;float:center ">
+								<a href="{%url 'fried' %}" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap First" src="/static/images/11-1.png" ></a>
+							</div>
+
+							<div class="carousel-item"			style="width:1000px;height:500px;float:center">
+								<a href="{%url 'tofu' %}" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap Second" src="/static/images/22-1.png" ></a>
+							</div>
+
+							<div class="carousel-item"			style="width:1000px;height:500px;float:center">
+								<a href="{%url 'chowfan' %}" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap Third" src="/static/images/33-1.png" ></a>
+							</div>
+
+							<div class="carousel-item"			style="width:1000px;height:500px;float:center">
+								<a href="{%url 'chowfan' %}" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap Fourth" src="/static/images/33-2.png" ></a>
+							</div>
+
+							<div class="carousel-item"			style="width:1000px;height:500px;float:center">
+								<a href="tofu-menu.html" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap Fifth" src="/static/images/22-2.png" ></a>
+							</div>
+
+							<div class="carousel-item"			style="width:1000px;height:500px;float:center">
+								<a href="{%url 'fried' %}" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap Sixth" src="/static/images/11-2.png" ></a>
+							</div>
+
+							<div class="carousel-item"			style="width:1000px;height:500px;float:center">
+								<a href="{%url 'chowfan' %}" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap Seventh" src="/static/images/33-3.png" ></a>
+							</div>							
+
+							<div class="carousel-item"			style="width:1000px;height:500px;float:center">
+								<a href="{%url 'fried' %}" style="width:1000px;height:400px;"><img class="d-block w-100" alt="Carousel Bootstrap Eighth" src="/static/images/11-3.png" ></a>
+							</div>
+
+
+						</div> 
+
+						<a class="carousel-control-prev" href="#carousel-492298" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span> 
+							<span class="sr-only">Previous</span>
+						</a> 
+
+						<a class="carousel-control-next" href="#carousel-492298" data-slide="next">
+							<span class="carousel-control-next-icon"></span> 
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper style3 special">
+				<div class="inner">
+					<header class="major narrow	">
+						<h2>About Us</h2>
+						<br><br>
+						<p style="text-align: left;font-family:'FangSong'">後餐，是台科的隱藏版美食，晚餐或是消夜的好選擇。入夜時分才會現身的深夜食堂，陣陣飄香吸引著人潮。除了炒飯炒麵，還有許多許多巷口美食及台灣招牌夜市食物。小小一台發財車卻可以變出許多美食滿足大家的胃。各有特色，獨具風味。</p>
+
+<P style="text-align: left;font-family:'FangSong'">所以我們想藉由這個網站，讓更多人認識台科的後餐。可以透過這個網頁看見後餐的菜單、營業時間以及大家的用餐心得與回饋。在點餐時可以有更多的意見與選擇可以參考。
+</p>
+					</header>
+					<ul class="actions">
+						<li><a href="{%url 'index' %}" class="button big alt">回到首頁</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Four 
+			<section id="four" class="wrapper style2 special">
+				<div class="inner">
+					<header class="major narrow">
+						<h2>Get in touch</h2>
+						<p>Ipsum dolor tempus commodo adipiscing</p>
+					</header>
+					<form action="#" method="POST">
+						<div class="container 75%">
+							<div class="row uniform 50%">
+								<div class="6u 12u$(xsmall)">
+									<input name="name" placeholder="Name" type="text" />
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input name="email" placeholder="Email" type="email" />
+								</div>
+								<div class="12u$">
+									<textarea name="message" placeholder="Message" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" class="special" value="Submit" /></li>
+							<li><input type="reset" class="alt" value="Reset" /></li>
+						</ul>
+					</form>
+				</div>
+			</section>-->
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/" class="icon fa-facebook">
+							<span class="label">Facebook</span>
+						</a></li>
+						<li><a href="https://twitter.com/?lang=zh-tw" class="icon fa-twitter">
+							<span class="label">Twitter</span>
+						</a></li>
+						<li><a href="https://www.instagram.com/" class="icon fa-instagram">
+							<span class="label">Instagram</span>
+						</a></li>
+						<li><a href="https://github.com/" class="icon fa-github">
+							<span class="label">Github</span>
+						</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled.</li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a>.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/assets/js/main.js"></script>
+
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+			    <script src="/static/src/js/jquery.min.js"></script>
+			    <script src="/static/src/js/bootstrap.min.js"></script>
+			    <script src="/static/src/js/scripts.js"></script>
+
+	</body>
+</html>

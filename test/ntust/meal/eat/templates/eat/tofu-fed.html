@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>後。食 | 臭豆腐蚵仔麵線 | 回饋</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/static/assets/css/main.css" /><link rel="Tableware Icon" type="image/x-icon" href="https://merakiroasting.com/wp-content/uploads/2017/10/115505-magic-marker-icon-food-beverage-knife-fork3.png" />
+
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="{%url 'index' %}" style="font-family:'FangSong';">NTUST EAT-LATE</a></h1>
+				<a href="#nav">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="{%url 'index' %}">Home</a></li>
+					<li><a href="{%url 'pick' %}">WHAT</a></li>
+					<li><a href="{%url 'vote' %}">VOTE</a></li>
+					<li><a href="{%url 'chowfan' %}">炒飯炒麵</a></li>
+					<li><a href="{%url 'tofu' %}">豆腐麵線</a></li>
+					<li><a href="{%url 'fried' %}">精選炸物</a></li>
+
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper" style="background-image:url(/static/images/food.png )">
+				<div class="container">
+
+					<header class="major special">
+						<h2 >臭豆腐&蚵仔麵線</h2>
+						<p>其實簡單吃也會很飽喔喔喔喔喔</p>
+					</header>
+		<!--Button-->
+			<ul class="actions" style="text-align: center;">
+				<li><a href="{%url 'tofu' %}" class="button special">介紹</a></li>
+				<li><a href="{%url 'tmenu' %}" class="button">菜單</a></li>
+				<li><a href="{%url 'tfeedback' %}" class="button alt">回饋</a></li>
+			</ul>
+			</section>
+		<!-- Four -->
+			<section id="four" class="wrapper style2 special">
+				<div class="inner">
+					<header class="major narrow">
+						<h2>FEEDBACK</h2>
+						<p>說出你的想法</p>
+					</header>
+					<form action="#" method="POST">
+						<div class="container 75%">
+							<div class="row uniform 50%">
+								<div class="12u$">
+									<input name="title" placeholder="Title" type="text" />
+								</div>
+								<div class="12u$">
+									<textarea name="content" placeholder="Content" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" class="special" value="Submit" /></li>
+							<li><input type="reset" class="alt" value="Reset" /></li>
+						</ul>
+					</form>
+				</div>
+			</section>
+
+
+		{% for post in tofu.feedback_set.all %}
+		<table class="table">
+			<tr>
+				<th>Title</th>
+					<td>{{ post.title}}</td>
+			</tr>
+
+			<tr>
+				<th>Message</th>
+					<td>{{ post.content}}</td>
+			</tr>
+
+			<tr>
+				<th>Published Time</th>
+					<td>{{post.pub_date}}</td>
+			</tr>
+
+
+			<hr>
+		{% endfor %}
+
+
+
+
+
+
+		 </table>
+
+		</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/" class="icon fa-facebook">
+							<span class="label">Facebook</span>
+						</a></li>
+						<li><a href="https://twitter.com/?lang=zh-tw" class="icon fa-twitter">
+							<span class="label">Twitter</span>
+						</a></li>
+						<li><a href="https://www.instagram.com/" class="icon fa-instagram">
+							<span class="label">Instagram</span>
+						</a></li>
+						<li><a href="https://github.com/" class="icon fa-github">
+							<span class="label">Github</span>
+						</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled.</li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a>.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/assets/js/main.js"></script>
+
+
+	</body>
+</html>

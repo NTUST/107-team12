@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+<style >
+	
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid ;
+}
+
+input[type="radio"]{
+    -webkit-appearance: radio;
+}
+</style>
+
+
+
+<label class= "img">
+  <input type="radio" name="fb" value="small" />
+  <img src="/static/images/map.jpg" >
+</label>
+</html>

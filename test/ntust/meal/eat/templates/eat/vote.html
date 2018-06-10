@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<style>
+.input-hidden {
+	position: absolute;
+	left: -9999px;
+}
+
+input[type=radio]:checked + label>img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 3px 3px #090;
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type=radio] + label>img {
+	border: 1px dashed #444;
+	width: 150px;
+	height: 150px;
+	transition: 500ms all;
+}
+
+input[type=radio]:checked + label>img {
+	transform: 
+	rotateZ(-10deg) 
+	rotateX(10deg);
+}</style>
+
+<html>
+<head>
+	<title>後。食 | 投票</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/static/assets/css/main.css" /><link rel="Tableware Icon" type="image/x-icon" href="https://merakiroasting.com/wp-content/uploads/2017/10/115505-magic-marker-icon-food-beverage-knife-fork3.png" />
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/static/assets/css/w3schools.css">
+</head>
+<body>
+
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="{%url 'index' %}" style="font-family:'FangSong';">NTUST EAT-LATE</a></h1>
+		<a href="#nav">Menu</a>
+	</header>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="{%url 'index' %}">Home</a></li>
+					<li><a href="{%url 'pick' %}">WHAT</a></li>
+					<li><a href="{%url 'vote' %}">VOTE</a></li>
+					<li><a href="{%url 'chowfan' %}">炒飯炒麵</a></li>
+					<li><a href="{%url 'tofu' %}">豆腐麵線</a></li>
+					<li><a href="{%url 'fried' %}">精選炸物</a></li>
+
+				</ul>
+			</nav>
+	<!--Main-->
+
+	<section id="main" class="wrapper" style="background-image:url(/static/images/food.png )">
+
+		<header class="major special">
+			<h2 style="font-size:bold">人氣美食</h2>
+			<p>到底誰是美食霸主呢??</p>
+		</header>
+
+	</section>
+
+	<section id="two" class="wrapper special">
+		<form action="" method="post">
+			{% csrf_token %}
+			
+
+				<div class="w3-row-padding w3-margin-top">{% for r in restaurant %}
+
+					<div class="w3-third">
+						
+						<div class="w3-card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+							<input 
+							type="radio" name="best" 
+							id="{{ r.name }}" class="input-hidden" value="{{ r.name }}" />
+							<label for="{{ r.name }}">
+								<img src="{{ r.image.url }}" style="width:400px;height: 300px" >
+							</label>
+
+							
+							<h5>{{ r.name }}</h5>
+						</div>
+
+
+					</div>{% endfor %}
+				</div>
+
+
+				
+
+				
+				<br><br>
+
+				<input type="submit" value="Vote" />
+			</form>
+
+			{% for r in restaurant %}
+			<h2>{{ r.name }}:{{ r.votes }}</h2>
+			{% endfor %}
+
+		</section>
+
+
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/" class="icon fa-facebook">
+						<span class="label">Facebook</span>
+					</a></li>
+					<li><a href="https://twitter.com/?lang=zh-tw" class="icon fa-twitter">
+						<span class="label">Twitter</span>
+					</a></li>
+					<li><a href="https://www.instagram.com/" class="icon fa-instagram">
+						<span class="label">Instagram</span>
+					</a></li>
+					<li><a href="https://github.com/" class="icon fa-github">
+						<span class="label">Github</span>
+					</a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled.</li>
+					<li>Images: <a href="http://unsplash.com">Unsplash</a>.</li>
+					<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="/static/assets/js/jquery.min.js"></script>
+		<script src="/static/assets/js/skel.min.js"></script>
+		<script src="/static/assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="/static/assets/js/main.js"></script>
+
+	</body>
+	</html>	
+
+
+<!--	<button class="button" style="height:60px">Click Me</button>-->
